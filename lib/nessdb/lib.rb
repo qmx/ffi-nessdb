@@ -2,7 +2,7 @@ require 'ffi'
 module NessDB
   module Lib
     extend FFI::Library
-    ffi_lib ['nessDB']
+    ffi_lib ['nessDB-1.8']
     attach_function :db_init, [:int, :int], :void
     attach_function :db_exists, [:string], :int
     attach_function :db_add, [:string, :string], :int
